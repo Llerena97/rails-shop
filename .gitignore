@@ -6,7 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -21,6 +20,7 @@
 /yarn-error.log
 
 /public/assets
+/public/uploads
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
