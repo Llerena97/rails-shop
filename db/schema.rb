@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_25_043253) do
+ActiveRecord::Schema.define(version: 2020_10_25_235333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "items", force: :cascade do |t|
     t.string "brand"
@@ -30,6 +35,16 @@ ActiveRecord::Schema.define(version: 2020_10_25_043253) do
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
+  create_table "line_items", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "quantity", default: 1
+    t.index ["cart_id"], name: "index_line_items_on_cart_id"
+    t.index ["item_id"], name: "index_line_items_on_item_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -44,4 +59,6 @@ ActiveRecord::Schema.define(version: 2020_10_25_043253) do
   end
 
   add_foreign_key "items", "users"
+  add_foreign_key "line_items", "carts"
+  add_foreign_key "line_items", "items"
 end
