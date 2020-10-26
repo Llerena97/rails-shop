@@ -1,24 +1,8 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails Shop
+-------------
 
-Things you may want to cover:
+This project is a manual emulation of a shopping cart made in ruby ​​on rails, this project is connected to AWS S3 for file management.
 
-* Ruby version
+`<Ruby>`  `<Ruby on Rails>`   `<Amazon S3>` 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

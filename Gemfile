@@ -18,6 +18,8 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'carrierwave', '~> 2.1'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+gem 'fog-aws', '~> 3.6', '>= 3.6.7'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
